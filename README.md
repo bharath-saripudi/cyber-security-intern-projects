@@ -35,6 +35,10 @@ Key Features:
 - Web interface for testing encryption/decryption
 - Educational explanations of cryptographic concepts
 
+![Encryption/Decryption Tool](./encryption-decryption-tool/Demo.png)
+
+![Encryption/Decryption Tool](./encryption-decryption-tool/Demo-1.png)
+
 ### 3. [Phishing Email Simulation](./phishing-email-simulation/)
 **Local phishing-awareness training simulation.**
 
@@ -47,6 +51,10 @@ Key Features:
 - Dashboard for viewing interaction data
 - Emphasis on educational use only with clear disclaimers
 
+![Phishing Email Simulation](./phishing-email-simulation/Demo.png)
+
+![Phishing Email Simulation](./phishing-email-simulation/Demo-1.png)
+
 ### 4. [Vulnerability Scanner](./vulnerability-scanner/)
 **Flask-based port and service scanner.**
 
@@ -58,6 +66,8 @@ Key Features:
 - Service identification with security notes
 - Web interface with real-time results display
 - Host validation via DNS resolution
+
+![Phishing Email Simulation](./phishing-email-simulation/Demo.png)
 
 ## Running the Projects
 
