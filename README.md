@@ -21,6 +21,8 @@ Key Features:
 - Secure password generation
 - Web interface for interactive testing
 
+![Password Strength Analyzer](./password-strength-analyzer/Demo.png)
+
 ### 2. [Encryption/Decryption Tool](./encryption-decryption-tool/)
 **Flask-based Fernet encryption/decryption demo.**
 
