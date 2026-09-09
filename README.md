@@ -67,7 +67,7 @@ Key Features:
 - Web interface with real-time results display
 - Host validation via DNS resolution
 
-![Phishing Email Simulation](./phishing-email-simulation/Demo.png)
+![Vulnerability Scanner](./vulnerability-scanner/Demo.png)
 
 ## Running the Projects
 
