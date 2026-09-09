@@ -1,0 +1,31 @@
+[
+  {
+    "campaign": "sample_email_1",
+    "timestamp": "2026-09-10T02:48:51.413933",
+    "ip": "127.0.0.1"
+  },
+  {
+    "campaign": "sample_email_1",
+    "campaign_name": "Password Reset Required",
+    "timestamp": "2026-09-10T03:00:49.344423",
+    "ip": "127.0.0.1",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.136.1 Chrome/148.0.7778.280 Electron/42.10.0 Safari/537.36",
+    "referrer": "http://127.0.0.1:5002/preview/sample_email_1",
+    "session_id": "d80e0c36-3f27-43d8-aa51-880d205929a0"
+  },
+  {
+    "campaign": "sample_email_1",
+    "campaign_name": "Password Reset Required",
+    "timestamp": "2026-09-10T03:01:28.589861",
+    "ip": "127.0.0.1",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.136.1 Chrome/148.0.7778.280 Electron/42.10.0 Safari/537.36",
+    "referrer": "http://127.0.0.1:5002/preview/sample_email_1",
+    "session_id": "95c5ba91-841b-4e74-b9dc-4a350e68cc7e"
+  },
+  {
+    "campaign": "fake_invoice",
+    "campaign_name": "Invoice Payment Required",
+    "timestamp": "2026-09-10T03:15:10.416546",
+    "ip": "127.0.0.1"
+  }
+]

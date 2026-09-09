@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Encryption / Decryption Tool</title>
+<style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 50px auto; }
+    textarea, input { width: 100%; padding: 8px; margin-top: 8px; box-sizing: border-box; }
+    button { margin-top: 10px; margin-right: 8px; padding: 8px 16px; }
+    #result { white-space: pre-wrap; word-break: break-all; background: #f4f4f4; padding: 10px; margin-top: 10px; }
+</style>
+</head>
+<body>
+    <h2>Encryption / Decryption Tool</h2>
+
+    <label>Algorithm:</label>
+    <select id="algo">
+        <option value="aes">AES</option>
+        <option value="rsa">RSA (short text only)</option>
+    </select>
+
+    <textarea id="text" rows="4" placeholder="Enter text..."></textarea>
+    <input type="text" id="password" placeholder="Password / key (AES only)">
+
+    <button onclick="doAction('encrypt')">Encrypt</button>
+    <button onclick="doAction('decrypt')">Decrypt</button>
+    <button onclick="doCompare()">Compare AES vs RSA Speed</button>
+
+    <div id="result"></div>
+
+<script>
+async function doAction(action) {
+    const text = document.getElementById("text").value;
+    const password = document.getElementById("password").value;
+    const algo = document.getElementById("algo").value;
+    const res = await fetch("/" + action, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text, password, algo })
+    });
+    const data = await res.json();
+    document.getElementById("result").textContent = data.result || data.error;
+}
+
+async function doCompare() {
+    const text = document.getElementById("text").value;
+    const res = await fetch("/compare", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text })
+    });
+    const data = await res.json();
+    document.getElementById("result").textContent =
+        `AES: ${data.aes_ms} ms  |  RSA: ${data.rsa_ms} ms`;
+}
+</script>
+</body>
+</html>

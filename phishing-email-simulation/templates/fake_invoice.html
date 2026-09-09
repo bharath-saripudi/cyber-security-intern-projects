@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice Payment Required - Action Needed</title>
+    <style>
+        body { font-family: 'Calibri', 'Arial', sans-serif; line-height: 1.5; color: #222; max-width: 600px; margin: 20px auto; padding: 20px; }
+        .header { border-bottom: 2px solid #2e74b5; padding-bottom: 10px; margin-bottom: 20px; }
+        .header h1 { color: #2e74b5; margin: 0; }
+        .invoice-box { border: 1px solid #ddd; border-radius: 5px; padding: 20px; margin: 20px 0; background-color: #f9f9f9; }
+        .invoice-header { display: flex; justify-content: space-between; margin-bottom: 20px; }
+        .invoice-header div { flex: 1; }
+        .invoice-header .company { font-weight: bold; font-size: 18px; color: #2e74b5; }
+        .invoice-header .details { text-align: right; font-size: 14px; color: #666; }
+        .invoice-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .invoice-table th, .invoice-table td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        .invoice-table th { background-color: #f2f2f2; font-weight: bold; }
+        .invoice-table tr:hover { background-color: #f5f5f5; }
+        .amount { font-size: 20px; font-weight: bold; color: #d32f2f; }
+        .button { display: inline-block; background-color: #2e74b5; color: white; padding: 12px 25px; text-decoration: none; border-radius: 4px; font-weight: bold; margin: 20px 5px 20px 0; }
+        .button-secondary { background-color: #6c757d; }
+        .warning { background-color: #fff8e1; border-left: 4px solid #ff9800; padding: 15px; margin: 20px 0; }
+        .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 13px; color: #666; }
+        .highlight { background-color: #fff3cd; padding: 2px 4px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Invoice Payment Required</h1>
+        <p>Urgent: Payment Overdue</p>
+    </div>
+
+    <p>Dear Valued Customer,</p>
+    <p>Our records indicate that payment for invoice <span class="highlight">INV-2026-08942</span> is now overdue. Please process payment immediately to avoid service interruption.</p>
+
+    <div class="invoice-box">
+        <div class="invoice-header">
+            <div class="company">
+                <strong>TechSolutions Inc.</strong><br>
+                123 Business Ave, Suite 500<br>
+                New York, NY 10001<br>
+                billing@techsolutions-inc.com
+            </div>
+            <div class="details">
+                <strong>Invoice #:</strong> INV-2026-08942<br>
+                <strong>Date Issued:</strong> August 25, 2026<br>
+                <strong>Due Date:</strong> September 10, 2026<br>
+                <strong>Balance Due:</strong> <span class="amount">$2,487.50</span>
+            </div>
+        </div>
+
+        <table class="invoice-table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cloud Storage Service - Enterprise Plan</td>
+                    <td>1</td>
+                    <td>$1,200.00</td>
+                    <td>$1,200.00</td>
+                </tr>
+                <tr>
+                    <td>Technical Support - Premium (Q3 2026)</td>
+                    <td>1</td>
+                    <td>$800.00</td>
+                    <td>$800.00</td>
+                </tr>
+                <tr>
+                    <td>API Usage - Additional Bandwidth</td>
+                    <td>150 GB</td>
+                    <td>$3.25/GB</td>
+                    <td>$487.50</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" style="text-align: right;"><strong>Subtotal:</strong></td>
+                    <td>$2,487.50</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: right;"><strong>Tax (8.5%):</strong></td>
+                    <td>$211.44</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: right;"><strong>Total Due:</strong></td>
+                    <td class="amount">$2,698.94</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <p>Please remit payment within <strong>24 hours</strong> to avoid:</p>
+        <ul>
+            <li>Service suspension</li>
+            <li>Late fees of 1.5% per month</li>
+            <li>Collection agency referral</li>
+        </ul>
+
+        <a href="/landing/fake_invoice" class="button">Pay Invoice Now</a>
+        <a href="#" class="button button-secondary">View Invoice Details</a>
+    </div>
+
+    <div class="warning">
+        <strong>Security Notice:</strong> Never share your banking credentials via email.
+        TechSolutions Inc. will never ask for your password or sensitive financial information through email.
+    </div>
+
+    <div class="footer">
+        <p>This is an automated message. Please do not reply to this email.</p>
+        <p>If you believe you received this email in error, please contact our billing department at billing@techsolutions-inc.com</p>
+        <p>© 2026 TechSolutions Inc. All rights reserved.</p>
+    </div>
+</body>
+</html>

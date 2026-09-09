@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HR Policy Acknowledgment</title>
+    <style>
+        body { font-family: 'Calibri', 'Arial', sans-serif; background-color: #f8f9fa; margin: 0; padding: 20px; }
+        .container { max-width: 500px; margin: 0 auto; background-color: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(to bottom, #2c5282, #1a365d); color: white; padding: 30px; text-align: center; }
+        .header h1 { margin: 0; font-size: 24px; }
+        .header p { margin: 10px 0 0; opacity: 0.9; font-size: 14px; }
+        .form-content { padding: 30px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #2c3e50; }
+        .form-group input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; box-sizing: border-box; }
+        .form-group input:focus { outline: none; border-color: #2c5282; box-shadow: 0 0 0 2px rgba(44,82,130,0.2); }
+        .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; box-sizing: border-box; }
+        .checkbox-label { display: flex; align-items: start; margin-bottom: 20px; }
+        .checkbox-label input { margin-top: 3px; margin-right: 8px; width: auto; }
+        .button { width: 100%; background-color: #2c5282; color: white; border: none; padding: 14px; font-size: 16px; border-radius: 4px; cursor: pointer; font-weight: 600; margin-top: 10px; }
+        .button:hover { background-color: #1a365d; }
+        .button-secondary { width: 100%; background-color: #718096; color: white; border: none; padding: 12px; font-size: 14px; border-radius: 4px; cursor: pointer; }
+        .button-secondary:hover { background-color: #5a6268; }
+        .security-box { background-color: #e6f3ff; border: 1px solid #bee3f8; border-radius: 6px; padding: 20px; margin: 25px 0; }
+        .security-icon { font-size: 24px; margin-bottom: 10px; display: block; }
+        .footer { text-align: center; padding: 20px; font-size: 12px; color: #666; border-top: 1px solid #eee; }
+        .requirements-list { background-color: #f7fafc; padding: 20px; border-radius: 5px; margin: 20px 0; }
+        .requirements-list h3 { margin-top: 0; color: #2c5282; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>HR Policy Portal</h1>
+            <p>GlobalTech Corporation</p>
+        </div>
+        <div class="form-content">
+            <h3>Work-From-Home Policy Acknowledgment</h3>
+            <p>Please complete this form to acknowledge receipt of the updated WFH policy.</p>
+
+            <form id="acknowledgmentForm">
+                <div class="form-group">
+                    <label for="employeeId">Employee ID</label>
+                    <input type="text" id="employeeId" name="employeeId" placeholder="Enter your employee ID" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <select id="department" name="department" required>
+                        <option value="">Select Department</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Sales">Sales</option>
+                        <option value="Human Resources">Human Resources</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Operations">Operations</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Company Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your company email" required>
+                </div>
+
+                <div class="checkbox-label">
+                    <input type="checkbox" id="policyRead" name="policyRead" required>
+                    <span>I have read and understood the updated Work-From-Home policy effective September 15, 2026.</span>
+                </div>
+
+                <div class="checkbox-label">
+                    <input type="checkbox" id="policyAgree" name="policyAgree" required>
+                    <span>I agree to comply with all requirements outlined in the updated policy.</span>
+                </div>
+
+                <button type="submit" class="button">Submit Acknowledgment</button>
+                <button type="button" class="button-secondary" onclick="window.location.href='/'">Cancel</button>
+            </form>
+
+            <div class="requirements-list">
+                <h3>Key Requirements Acknowledgement:</h3>
+                <p>By submitting this form, you acknowledge understanding of:</p>
+                <ul>
+                    <li>6-month minimum employment for WFH eligibility</li>
+                    <li>Maximum 3 WFH days per week</li>
+                    <li>Quarterly cybersecurity training requirement</li>
+                    <li>Daily Teams check-in during core hours</li>
+                    <li>Equipment return procedures</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <p>GlobalTech Corporation • 500 Innovation Drive, San Francisco, CA 94107</p>
+            <p>© 2026 GlobalTech Corporation. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('acknowledgmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Collect form data (in real attack, this would be sent to attacker)
+            const formData = {
+                employeeId: document.getElementById('employeeId').value,
+                fullName: document.getElementById('fullName').value,
+                department: document.getElementById('department').value,
+                email: document.getElementById('email').value,
+                policyRead: document.getElementById('policyRead').checked,
+                policyAgree: document.getElementById('policyAgree').checked
+            };
+
+            // Educational warning
+            alert('SECURITY ALERT: This is a simulated phishing site for training purposes.\n' +
+                  'If this were real, your personal information would have been compromised.\n\n' +
+                  'Data that would be captured:\n' +
+                  '- Employee ID: ' + formData.employeeId + '\n' +
+                  '- Full Name: ' + formData.fullName + '\n' +
+                  '- Department: ' + formData.department + '\n' +
+                  '- Email: ' + formData.email + '\n' +
+                  '- Policy Read: ' + formData.policyRead + '\n' +
+                  '- Policy Agree: ' + formData.policyAgree);
+
+            // Show educational page
+            window.location.href = '/landing/hr_policy_educational';
+        });
+    </script>
+</body>
+</html>
